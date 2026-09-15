@@ -1099,16 +1099,28 @@
                 </form>
               </div>
 
-              <!-- Bloquear Data (Feriados ou Folgas) -->
+              <!-- Bloquear Período ou Data (Férias / Feriados / Recessos) -->
               <div class="card-box">
-                <h3>Bloquear Dia Específico (Folgas / Feriados)</h3>
-                <p class="subtext">Nenhum horário será exibido na busca de pacientes para datas bloqueadas.</p>
+                <h3>Bloquear Período ou Dia (Férias & Folgas)</h3>
+                <p class="subtext">Bloqueie um dia específico ou um período completo para férias. Nenhum horário será exibido na busca de pacientes.</p>
                 <form id="form-add-block" onsubmit="handleAddBloqueioData(event)" class="mt-3">
-                  <div class="form-group">
-                    <label>Data a Bloquear</label>
-                    <input type="date" id="block-data" class="form-input" required>
+                  <div class="form-grid">
+                    <div class="form-group">
+                      <label>Data Inicial *</label>
+                      <input type="date" id="block-data-inicio" class="form-input" required onchange="syncBlockEndDate(this.value)">
+                    </div>
+                    <div class="form-group">
+                      <label>Data Final (Férias / Recesso) *</label>
+                      <input type="date" id="block-data-fim" class="form-input" required>
+                    </div>
                   </div>
-                  <button type="submit" class="btn btn-danger btn-block mt-3">🔒 Bloquear Data na Agenda</button>
+                  <div class="form-group mt-2">
+                    <label>Motivo do Bloqueio (opcional)</label>
+                    <input type="text" id="block-motivo" class="form-input" placeholder="Ex: Férias da Psicanalista, Recesso de Fim de Ano, Feriado...">
+                  </div>
+                  <button type="submit" class="btn btn-danger btn-block mt-3">
+                    <span>🔒 Bloquear Período na Agenda</span>
+                  </button>
                 </form>
               </div>
             </div>

@@ -1457,29 +1457,46 @@ async function handleAddHorarioSlot(event) {
   }
 }
 
-// Bloqueio de Feriado ou Folga
+function syncBlockEndDate(startDateVal) {
+  const endDateInput = document.getElementById('block-data-fim');
+  if (endDateInput && (!endDateInput.value || endDateInput.value < startDateVal)) {
+    endDateInput.value = startDateVal;
+  }
+}
+
+// Bloqueio de Feriado, Folga ou Período de Férias
 async function handleAddBloqueioData(event) {
   event.preventDefault();
-  const data_bloqueio = document.getElementById('block-data').value;
-  if (!data_bloqueio) return;
+  const data_inicio = document.getElementById('block-data-inicio')?.value || document.getElementById('block-data')?.value;
+  let data_fim = document.getElementById('block-data-fim')?.value || data_inicio;
+  const motivo = document.getElementById('block-motivo')?.value || '';
+
+  if (!data_inicio) return;
+  if (!data_fim || data_fim < data_inicio) {
+    data_fim = data_inicio;
+  }
 
   try {
     const res = await fetch(`${API_BASE}/api/admin/horarios/bloquear-data`, {
       method: 'POST',
       headers: getAuthHeaders(),
-      body: JSON.stringify({ token: state.adminToken, data_bloqueio })
+      body: JSON.stringify({ token: state.adminToken, data_inicio, data_fim, data_bloqueio: data_inicio, motivo })
     });
 
     if (res.ok) {
-      showToast('Data bloqueada com sucesso! Horários desativados para esta data.', 'success');
-      document.getElementById('block-data').value = '';
+      const data = await res.json();
+      showToast(data.message || 'Período bloqueado na agenda com sucesso!', 'success');
+      if (document.getElementById('block-data-inicio')) document.getElementById('block-data-inicio').value = '';
+      if (document.getElementById('block-data-fim')) document.getElementById('block-data-fim').value = '';
+      if (document.getElementById('block-motivo')) document.getElementById('block-motivo').value = '';
+      if (document.getElementById('block-data')) document.getElementById('block-data').value = '';
       loadAdminGradeHorarios();
     } else {
       const data = await res.json();
-      showToast(data.error || 'Erro ao bloquear data.', 'error');
+      showToast(data.error || 'Erro ao bloquear período.', 'error');
     }
   } catch (err) {
-    showToast('Erro de conexão.', 'error');
+    showToast('Erro de conexão ao salvar bloqueio.', 'error');
   }
 }
 

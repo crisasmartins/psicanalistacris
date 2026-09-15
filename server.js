@@ -1546,29 +1546,67 @@ app.post('/api/admin/horarios/lote', authenticatePsicanalista, async (req, res) 
   }
 });
 
-// Bloquear data específica (férias, feriados ou folgas)
+// Bloquear data específica ou período (férias, recesso, feriados ou folgas)
 app.post('/api/admin/horarios/bloquear-data', authenticatePsicanalista, async (req, res) => {
   try {
-    const { data_bloqueio } = req.body;
+    const { data_inicio, data_fim, data_bloqueio, motivo } = req.body;
     const psi = await getPsicanalista();
 
-    const existing = await sql`
-      SELECT id FROM horarios_disponiveis 
-      WHERE psicanalista_id = ${psi.id} AND data_bloqueio = ${data_bloqueio}
-    `;
-    if (existing.length > 0) {
-      return res.status(409).json({ error: 'Esta data já está bloqueada.' });
+    const startStr = data_inicio || data_bloqueio;
+    const endStr = data_fim || startStr;
+
+    if (!startStr) {
+      return res.status(400).json({ error: 'Informe a data de início do bloqueio.' });
     }
 
-    const result = await sql`
-      INSERT INTO horarios_disponiveis (psicanalista_id, hora_inicio, hora_fim, data_bloqueio)
-      VALUES (${psi.id}, '00:00', '23:59', ${data_bloqueio})
-      RETURNING *
-    `;
-    res.status(201).json(result[0]);
+    const startDate = new Date(startStr + 'T00:00:00');
+    const endDate = new Date(endStr + 'T00:00:00');
+
+    if (isNaN(startDate.getTime()) || isNaN(endDate.getTime())) {
+      return res.status(400).json({ error: 'Formato de data inválido.' });
+    }
+
+    if (endDate < startDate) {
+      return res.status(400).json({ error: 'A data final do período de férias não pode ser anterior à data inicial.' });
+    }
+
+    let bloqueadosCount = 0;
+    const curr = new Date(startDate);
+
+    while (curr <= endDate) {
+      const year = curr.getFullYear();
+      const month = String(curr.getMonth() + 1).padStart(2, '0');
+      const day = String(curr.getDate()).padStart(2, '0');
+      const dateStr = `${year}-${month}-${day}`;
+      
+      const existing = await sql`
+        SELECT id FROM horarios_disponiveis 
+        WHERE psicanalista_id = ${psi.id} AND data_bloqueio = ${dateStr}
+      `;
+
+      if (existing.length === 0) {
+        await sql`
+          INSERT INTO horarios_disponiveis (psicanalista_id, hora_inicio, hora_fim, data_bloqueio)
+          VALUES (${psi.id}, '00:00', '23:59', ${dateStr})
+        `;
+        bloqueadosCount++;
+      }
+
+      curr.setDate(curr.getDate() + 1);
+    }
+
+    if (bloqueadosCount === 0) {
+      return res.status(200).json({ message: 'As datas deste período já se encontram bloqueadas na agenda.' });
+    }
+
+    const msg = startStr === endStr
+      ? 'Data bloqueada na agenda com sucesso!'
+      : `Período de férias (${bloqueadosCount} dia(s)) bloqueado com sucesso na agenda!`;
+
+    res.status(201).json({ message: msg, count: bloqueadosCount });
   } catch (err) {
-    console.error('Erro ao bloquear data:', err);
-    res.status(500).json({ error: 'Erro ao registrar bloqueio de data.' });
+    console.error('Erro ao bloquear período de datas:', err);
+    res.status(500).json({ error: 'Erro ao registrar bloqueio de período na agenda.' });
   }
 });
 
