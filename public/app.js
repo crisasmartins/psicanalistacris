@@ -115,7 +115,39 @@ function scrollToSection(sectionId) {
       el.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }, 50);
+
+  // Fecha menu mobile se estiver aberto
+  closeMobileMenu();
 }
+
+function toggleMobileMenu() {
+  const navLinks = document.querySelector('.nav-links');
+  const toggleBtn = document.getElementById('mobile-menu-toggle');
+  if (navLinks) {
+    navLinks.classList.toggle('mobile-active');
+  }
+  if (toggleBtn) {
+    toggleBtn.classList.toggle('active');
+  }
+}
+
+function closeMobileMenu() {
+  const navLinks = document.querySelector('.nav-links');
+  const toggleBtn = document.getElementById('mobile-menu-toggle');
+  if (navLinks && navLinks.classList.contains('mobile-active')) {
+    navLinks.classList.remove('mobile-active');
+  }
+  if (toggleBtn && toggleBtn.classList.contains('active')) {
+    toggleBtn.classList.remove('active');
+  }
+}
+
+// Fecha menu mobile ao clicar fora ou em qualquer botão de navegação
+document.addEventListener('click', (e) => {
+  if (e.target.closest('.nav-btn')) {
+    closeMobileMenu();
+  }
+});
 
 function showStep(stepNumber) {
   const pStep = document.getElementById('step-paciente');
