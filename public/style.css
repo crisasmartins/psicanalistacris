@@ -129,17 +129,17 @@ body {
 
 .logo-symbol,
 .admin-avatar {
-  width: 48px;
-  height: 48px;
+  width: 52px;
+  height: 52px;
   border-radius: var(--radius-full);
-  background: #FFFFFF;
-  border: 2px solid var(--gold-primary);
+  background: rgba(197, 160, 89, 0.12);
+  border: 1px solid var(--border-gold);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 16px rgba(197, 160, 89, 0.45);
+  box-shadow: 0 0 16px rgba(197, 160, 89, 0.28);
   transition: all 0.3s ease;
-  padding: 3px;
+  padding: 4px;
   overflow: hidden;
   flex-shrink: 0;
 }
@@ -149,6 +149,7 @@ body {
   height: 100%;
   object-fit: contain;
   display: block;
+  filter: drop-shadow(0 2px 6px rgba(212, 175, 55, 0.45));
 }
 
 .brand-logo:hover .logo-symbol {
@@ -164,20 +165,20 @@ body {
 
 .brand-title {
   font-family: var(--font-serif);
-  font-size: 1.35rem;
-  font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: 700;
   letter-spacing: 0.5px;
   color: var(--text-main);
   line-height: 1.2;
 }
 
 .brand-sub {
-  font-size: 0.74rem;
-  color: var(--gold-primary);
-  letter-spacing: 1.5px;
+  font-size: 0.84rem;
+  color: var(--gold-champagne);
+  letter-spacing: 1.8px;
   text-transform: uppercase;
-  font-weight: 500;
-  margin-top: 2px;
+  font-weight: 600;
+  margin-top: 3px;
 }
 
 .nav-links {
@@ -3012,16 +3013,20 @@ label {
 /* @media (max-width: 576px) - Dispositivos Mobile Compactos */
 @media (max-width: 576px) {
   .brand-title {
-    font-size: 1.1rem;
+    font-size: 1.35rem;
+    font-weight: 700;
+    line-height: 1.25;
   }
 
   .brand-sub {
-    font-size: 0.68rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1.2px;
   }
 
   .logo-symbol {
-    width: 40px;
-    height: 40px;
+    width: 46px;
+    height: 46px;
   }
 
   /* Passo a Passo do Agendamento */
