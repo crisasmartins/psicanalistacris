@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Psicanalista Cristina Martins - Consultório de Psicanálise Clínica. Agendamento online de consultas, acolhimento, escuta analítica e total sigilo profissional.">
+  <title>Psicanalista Cristina Martins | Consultório de Psicanálise</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==================== TOPO / CABEÇALHO ==================== -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-logo" onclick="navigateTo('page-home')" title="Consultório de Psicanálise Cristina Martins - ABRAFP">
+        <div class="logo-symbol">
+          <img src="simbolo-psicanalise.png" alt="Símbolo da Psicanálise (Caduceu)" class="caduceu-img">
+        </div>
+        <div class="logo-text">
+          <span class="brand-title">Psicanalista Cristina Martins</span>
+          <span class="brand-sub">Clínica & Terapia Psicanalítica</span>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <button class="nav-btn" onclick="navigateTo('page-home')">Início</button>
+        <button class="nav-btn" onclick="scrollToSection('section-sobre-mim')">Sobre Mim</button>
+        <button class="nav-btn" onclick="scrollToSection('section-areas-atuacao')">Áreas de Atuação</button>
+        <button class="nav-btn" onclick="navigateTo('page-agendamento')">Agendar Consulta</button>
+        <button class="nav-btn" onclick="navigateTo('page-minhas-consultas')">Minhas Consultas</button>
+        <button class="nav-btn btn-admin-link" onclick="navigateTo('page-admin-login')">
+          <span class="lock-icon">🔒</span> Área da Psicanalista
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+
+    <!-- ==================== PÁGINA INICIAL / ÁREA PÚBLICA ==================== -->
+    <section id="page-home" class="page-view active">
+      <div class="hero-section">
+        <div class="hero-glow glow-rose"></div>
+        <div class="hero-glow glow-gold"></div>
+        
+        <div class="hero-badge">✦ Espaço Terapêutico de Escuta & Acolhimento</div>
+        <h1 class="hero-headline">
+          Um espaço seguro para <br><span class="rose-gold-gradient">elaborar e transformar</span>
+        </h1>
+        <p class="hero-lead">
+          A psicanálise oferece um lugar singular de escuta para suas angústias, conflitos e desejos. Cuidar de si é um ato de coragem, força e transformação.
+        </p>
+
+        <div class="hero-cta-group">
+          <button class="btn btn-primary btn-glow" onclick="navigateTo('page-agendamento')">
+            <span>Iniciar Agendamento</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+          <button class="btn btn-secondary btn-glow-rose" onclick="scrollToSection('section-sobre-mim')">
+            <span>Conheça meu trabalho e especialidades</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <button class="btn btn-outline" onclick="navigateTo('page-minhas-consultas')">
+            <span>Já sou Paciente</span>
+          </button>
+        </div>
+
+        <div class="pillars-grid">
+          <div class="pillar-card">
+            <div class="pillar-icon">🏺</div>
+            <h3>Escuta Analítica & Ética</h3>
+            <p>Atendimento focado na singularidade de sua história, com acolhimento genuíno, confidencialidade e sem julgamentos.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">🔒</div>
+            <h3>Sigilo Profissional Absoluto</h3>
+            <p>Seus relatos, sessões e anotações clínicas são resguardados pelo mais rigoroso código de ética e sigilo com criptografia.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">🌱</div>
+            <h3>Força & Transformação</h3>
+            <p>Um percurso terapêutico para ressignificar dores, elaborar traumas e conquistar autonomia sobre seus próprios desejos.</p>
+          </div>
+        </div>
+
+        <!-- Citação Psicanalítica de Acolhimento -->
+        <div class="psycho-quote-card mt-4">
+          <div class="quote-symbol">“</div>
+          <p class="quote-text">
+            A cura pela fala é o reencontro do sujeito com a sua própria verdade. Em cada palavra dita, há uma oportunidade de elaboração, acolhimento e transformação.
+          </p>
+          <div class="quote-author">
+            <strong>Psicanalista Cristina Martins</strong>
+            <span>Escuta Clínica, Acolhimento & Ética Psicanalítica</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== SEÇÃO: SOBRE MIM & FORMAÇÃO ACADÊMICA ==================== -->
+      <div id="section-sobre-mim" class="home-section-container mt-6">
+        <div class="section-badge">✦ Apresentação Profissional & Trajetória</div>
+        <h2 class="section-heading">Sobre Mim & Formação Acadêmica</h2>
+        <p class="section-subheading">
+          Um trabalho pautado pela ética psicanalítica, empatia e compromisso genuíno com a restauração de vidas e relacionamentos.
+        </p>
+
+        <!-- Card de Biografia Profissional -->
+        <div class="about-hero-card mt-4">
+          <div class="about-avatar-wrapper">
+            <div class="about-avatar-frame">
+              <span class="avatar-monogram">CM</span>
+            </div>
+            <span class="badge-role">Psicanalista Clínica</span>
+          </div>
+
+          <div class="about-bio-content">
+            <h3>Boas-vindas ao meu espaço de escuta</h3>
+            <p class="bio-paragraph">
+              Sou a <strong>Psicanalista Cristina Martins</strong>. Minha atuação clínica é fundamentada no acolhimento ético, na escuta atenta e na singularidade de cada história. Acredito que a psicanálise oferece um caminho profundo de autoconhecimento, libertação de dores inconscientes e ressignificação de conflitos emocionais.
+            </p>
+            <p class="bio-paragraph">
+              Com um olhar humanizado e empático, dedico minha trajetória a auxiliar indivíduos, mulheres, casais e famílias a encontrarem clareza, restauração emocional e fortalecimento de seus laços mais preciosos.
+            </p>
+            
+            <div class="bio-highlights mt-3">
+              <div class="bio-pill">
+                <span class="pill-icon">✨</span>
+                <span>Escuta Empática & Singular</span>
+              </div>
+              <div class="bio-pill">
+                <span class="pill-icon">🔒</span>
+                <span>Absoluto Sigilo Ético</span>
+              </div>
+              <div class="bio-pill">
+                <span class="pill-icon">🕊️</span>
+                <span>Restauração Pessoal & Relacional</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formação Profissional Oficial -->
+        <div class="academic-single-wrapper mt-5">
+          <div class="academic-card featured-academic-card">
+            <div class="academic-icon">🎓</div>
+            <div class="academic-content">
+              <span class="academic-badge">✦ Formação Profissional Oficial</span>
+              <h4>Formação em Psicanálise</h4>
+              <p class="institution-name">Associação Brasileira de Filosofia e Psicanálise (ABRAFP)</p>
+              <p class="academic-desc">
+                Formação pautada nos rigorosos preceitos da clínica e teoria psicanalítica, abrangendo o estudo aprofundado dos processos inconscientes, livre associação, escuta ética e compromisso contínuo com a práxis analítica.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card de Abordagem Terapêutica -->
+        <div class="therapeutic-approach-card mt-5">
+          <div class="approach-header">
+            <span class="quote-icon">🏺</span>
+            <div>
+              <h3>Como Funciona o Processo Terapêutico</h3>
+              <p class="subtext">O compromisso com o seu bem-estar e autonomia em cada sessão</p>
+            </div>
+          </div>
+          <div class="approach-steps-grid mt-4">
+            <div class="approach-step shadow-hover">
+              <div class="step-badge-icon">1</div>
+              <h4>Acolhimento & Escuta Livre</h4>
+              <p>Você é acolhida(o) em um ambiente seguro e sem julgamentos, onde é incentivada(o) a falar livremente sobre seus pensamentos, angústias e sentimentos.</p>
+            </div>
+            <div class="approach-step shadow-hover">
+              <div class="step-badge-icon">2</div>
+              <h4>Investigação & Elaboração</h4>
+              <p>Através da fala e das intervenções analíticas, identificamos padrões repetitivos, sintomas inconscientes e raízes de conflitos pessoais ou relacionais.</p>
+            </div>
+            <div class="approach-step shadow-hover">
+              <div class="step-badge-icon">3</div>
+              <h4>Ressignificação & Autonomia</h4>
+              <p>Com o progresso da análise, você constrói novas formas de lidar com suas emoções, restaurando sua autoestima, seus vínculos e sua liberdade de escolha.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== SEÇÃO: PÚBLICO-ALVO & ÁREAS DE ATUAÇÃO ==================== -->
+      <div id="section-areas-atuacao" class="home-section-container mt-6">
+        <div class="section-badge">✦ Modalidades de Atendimento & Especialidades</div>
+        <h2 class="section-heading">Público-Alvo e Áreas de Atuação</h2>
+        <p class="section-subheading">
+          Atendimento direcionado para suas necessidades específicas, oferecendo acolhimento individual, suporte feminino, restauração matrimonial e harmonização familiar.
+        </p>
+
+        <div class="specialties-grid mt-4">
+
+          <!-- CARD 1: Atendimento Geral & Terapia Individual -->
+          <div class="specialty-card">
+            <div class="card-top-icon">🧠</div>
+            <span class="specialty-tag">Individual</span>
+            <h3>Atendimento Geral & Terapia Individual</h3>
+            <p class="specialty-desc">
+              Suporte terapêutico a demandas psíquicas gerais, proporcionando um espaço de autoconhecimento, inteligência emocional e superação de crises.
+            </p>
+            
+            <ul class="specialty-topics">
+              <li><span class="check-bullet">✓</span> Ansiedade, angústia, estresse e sobrecarga emocional</li>
+              <li><span class="check-bullet">✓</span> Processos de luto, transições de vida e crises existenciais</li>
+              <li><span class="check-bullet">✓</span> Desenvolvimento pessoal, autoconhecimento e maturidade afetiva</li>
+            </ul>
+
+            <div class="specialty-card-footer mt-4">
+              <button class="btn btn-primary btn-block btn-glow-sm" onclick="navigateTo('page-agendamento')">
+                <span>Agendar Terapia Individual</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- CARD 2: Atendimento Especializado para Mulheres -->
+          <div class="specialty-card featured-gold">
+            <div class="featured-badge-top">✦ Especialidade em Destaque</div>
+            <div class="card-top-icon">🌸</div>
+            <span class="specialty-tag rose">Público Feminino</span>
+            <h3>Atendimento Especializado para Mulheres</h3>
+            <p class="specialty-desc">
+              Cuidado dedicado à saúde emocional da mulher em todas as suas fases, promovendo restauração interna e relacionamentos saudáveis.
+            </p>
+
+            <div class="sub-modalities-box">
+              <div class="sub-modality">
+                <h5>👑 Restauração Pessoal & Autocuidado</h5>
+                <p>Fortalecimento da autoimagem, resgate da autoestima, superação de traumas emocionais e redescoberta da identidade feminina.</p>
+              </div>
+              <div class="sub-modality mt-2">
+                <h5>💞 Relacionamentos & Afetividade</h5>
+                <p>Auxílio no enfrentamento de desafios relacionais, dependência emocional, estabelecimento de limites e rompimento de padrões nocivos.</p>
+              </div>
+            </div>
+
+            <div class="specialty-card-footer mt-3">
+              <button class="btn btn-primary btn-block btn-glow" onclick="navigateTo('page-agendamento')">
+                <span>Agendar Atendimento Feminino</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- CARD 3: Terapia de Casal & Restauração Matrimonial -->
+          <div class="specialty-card">
+            <div class="card-top-icon">💍</div>
+            <span class="specialty-tag gold">Conjugal</span>
+            <h3>Terapia de Casal & Restauração Matrimonial</h3>
+            <p class="specialty-desc">
+              Espaço neutro e mediado para casais que buscam reestruturar o diálogo, superar crises e reacender a cumplicidade na relação.
+            </p>
+
+            <ul class="specialty-topics">
+              <li><span class="check-bullet">✓</span> Restauração de vínculos e reconstrução da confiança quebrada</li>
+              <li><span class="check-bullet">✓</span> Melhora da comunicação assertiva e mediação de conflitos</li>
+              <li><span class="check-bullet">✓</span> Fortalecimento da aliança matrimonial e dos projetos em conjunto</li>
+            </ul>
+
+            <div class="specialty-card-footer mt-4">
+              <button class="btn btn-primary btn-block btn-glow-sm" onclick="navigateTo('page-agendamento')">
+                <span>Agendar Terapia de Casal</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- CARD 4: Terapia Familiar & Dinâmicas Familiares -->
+          <div class="specialty-card">
+            <div class="card-top-icon">🏡</div>
+            <span class="specialty-tag">Familiar</span>
+            <h3>Terapia Familiar & Dinâmicas Familiares</h3>
+            <p class="specialty-desc">
+              Atendimento focado na mediação de desentendimentos familiares, promovendo o entendimento mútuo e a paz no lar.
+            </p>
+
+            <ul class="specialty-topics">
+              <li><span class="check-bullet">✓</span> Mediação de conflitos entre pais, filhos e familiares</li>
+              <li><span class="check-bullet">✓</span> Fortalecimento dos laços parentais e autoridade amorosa</li>
+              <li><span class="check-bullet">✓</span> Harmonização do ambiente familiar e superação de crises coletivas</li>
+            </ul>
+
+            <div class="specialty-card-footer mt-4">
+              <button class="btn btn-primary btn-block btn-glow-sm" onclick="navigateTo('page-agendamento')">
+                <span>Agendar Terapia Familiar</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Banner Final de Chamada de Agendamento Direto & WhatsApp -->
+        <div class="final-cta-banner mt-6 mb-5">
+          <div class="cta-banner-content">
+            <h3>Pronta(o) para dar o primeiro passo na sua jornada de transformação?</h3>
+            <p>Agende sua consulta online no horário mais conveniente para você ou entre em contato direto via WhatsApp para tirar dúvidas.</p>
+            
+            <div class="cta-banner-actions mt-4">
+              <button class="btn btn-primary btn-lg btn-glow" onclick="navigateTo('page-agendamento')">
+                <span>🗓️ Agendar Consulta Agora</span>
+              </button>
+              <a href="https://wa.me/5524942168856?text=Ol%C3%A1,%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20atendimento%20com%20a%20Psicanalista%20Cristina%20Martins" target="_blank" class="btn btn-whatsapp btn-lg">
+                <span>💬 Falar no WhatsApp</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FORMULÁRIO DE AGENDAMENTO EM PASSOS ==================== -->
+    <section id="page-agendamento" class="page-view">
+      <div class="container-narrow">
+        
+        <!-- Indicador de Passos -->
+        <div class="steps-progress-bar">
+          <div class="step-indicator active" id="indicator-step-1">
+            <span class="step-num">1</span>
+            <span class="step-txt">Seus Dados</span>
+          </div>
+          <div class="step-line"></div>
+          <div class="step-indicator" id="indicator-step-2">
+            <span class="step-num">2</span>
+            <span class="step-txt">Data & Horário</span>
+          </div>
+          <div class="step-line"></div>
+          <div class="step-indicator" id="indicator-step-3">
+            <span class="step-num">3</span>
+            <span class="step-txt">Pagamento</span>
+          </div>
+          <div class="step-line"></div>
+          <div class="step-indicator" id="indicator-step-4">
+            <span class="step-num">4</span>
+            <span class="step-txt">Confirmação</span>
+          </div>
+        </div>
+
+        <!-- PASSO 1: DADOS DA PACIENTE -->
+        <div id="step-paciente" class="card-box booking-step">
+          <div class="step-header">
+            <span class="step-tag">Passo 1 de 4</span>
+            <h2>Dados para Agendamento</h2>
+            <p>Preencha seus dados para iniciarmos o acolhimento terapêutico.</p>
+          </div>
+
+          <form id="form-paciente" onsubmit="handleSalvarPaciente(event)">
+            <div class="form-grid">
+              <div class="form-group full-width">
+                <label for="p-nome">Nome Completo *</label>
+                <input type="text" id="p-nome" class="form-input" placeholder="Digite seu nome completo" required>
+              </div>
+              <div class="form-group">
+                <label for="p-email">E-mail *</label>
+                <input type="email" id="p-email" class="form-input" placeholder="seuemail@exemplo.com" required>
+              </div>
+              <div class="form-group">
+                <label for="p-whatsapp">WhatsApp *</label>
+                <input type="text" id="p-whatsapp" class="form-input" placeholder="(00) 00000-0000" maxlength="15" oninput="formatPhone(this)" required>
+              </div>
+              <div class="form-group full-width">
+                <label for="p-nascimento">Data de Nascimento</label>
+                <input type="date" id="p-nascimento" class="form-input">
+              </div>
+              <div class="form-group full-width">
+                <label for="p-motivo">Breve relato / Motivo da consulta (opcional)</label>
+                <textarea id="p-motivo" class="form-textarea" rows="3" placeholder="Se desejar, compartilhe brevemente o que motivou a busca pela análise..."></textarea>
+                <small class="field-hint">Suas informações são estritamente confidenciais e protegidas por sigilo profissional.</small>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block btn-lg mt-4">
+              <span>Avançar para Escolha de Horário</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </form>
+        </div>
+
+        <!-- PASSO 2: CALENDÁRIO INTERATIVO -->
+        <div id="step-horarios" class="card-box booking-step" style="display: none;">
+          <div class="step-header flex-between">
+            <div>
+              <span class="step-tag">Passo 2 de 4</span>
+              <h2>Escolha a Data e Horário</h2>
+              <p>Horários livres previamente liberados pela Psicanalista Cristina Martins.</p>
+            </div>
+            <div class="user-badge" id="booking-user-badge"></div>
+          </div>
+
+          <!-- Navegador de Mês do Calendário -->
+          <div class="calendar-monthly-wrapper">
+            <div class="calendar-nav-bar">
+              <button class="btn btn-secondary btn-sm" onclick="changeCalendarMonth(-1)">
+                &larr; Mês Anterior
+              </button>
+              <h3 id="calendar-current-month-label" class="calendar-month-title">--</h3>
+              <button class="btn btn-secondary btn-sm" onclick="changeCalendarMonth(1)">
+                Próximo Mês &rarr;
+              </button>
+            </div>
+
+            <!-- Cabeçalho dos Dias da Semana -->
+            <div class="calendar-weekdays-grid">
+              <div class="cal-weekday-header">Dom</div>
+              <div class="cal-weekday-header">Seg</div>
+              <div class="cal-weekday-header">Ter</div>
+              <div class="cal-weekday-header">Qua</div>
+              <div class="cal-weekday-header">Qui</div>
+              <div class="cal-weekday-header">Sex</div>
+              <div class="cal-weekday-header">Sáb</div>
+            </div>
+
+            <!-- Grade dos Dias do Mês (7 Colunas Tradicionais) -->
+            <div id="calendar-days-cells" class="calendar-days-grid"></div>
+          </div>
+
+          <div class="text-right mt-2">
+            <button class="btn-text" onclick="resetPacienteStep()">Editar meus dados cadastrais</button>
+          </div>
+
+          <!-- Slots de Horários Livres do Dia Selecionado -->
+          <div id="slots-area" class="slots-area" style="display:none;">
+            <div class="flex-between mb-2">
+              <h4 id="selected-date-label">Horários livres disponíveis:</h4>
+              <span class="subtext" style="color: var(--accent-emerald);">● Apenas horários livres</span>
+            </div>
+            <div id="available-slots-grid" class="slots-grid">
+              <!-- Preenchido dinamicamente via JS -->
+            </div>
+          </div>
+
+          <!-- Resumo da Seleção e Ação para Checkout -->
+          <div id="booking-summary-box" class="booking-summary-box" style="display:none;">
+            <div class="summary-details">
+              <div>
+                <span class="summary-label">Sessão de Psicanálise Individual (50 minutos)</span>
+                <div class="summary-datetime" id="summary-datetime-text">--/-- às --:--</div>
+              </div>
+              <div class="summary-price">
+                <span class="price-val" id="summary-price-val">R$ 180,00</span>
+                <span class="price-type">por sessão</span>
+              </div>
+            </div>
+
+            <button class="btn btn-primary btn-block btn-lg mt-3" onclick="handleAvancarParaCheckout()">
+              <span>Avançar para Pagamento & Checkout Seguro</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- PASSO 3: CHECKOUT, PACOTES & PAGAMENTO SEGURO -->
+        <div id="step-checkout" class="card-box booking-step" style="display: none;">
+          <div class="step-header flex-between">
+            <div>
+              <span class="step-tag">Passo 3 de 4</span>
+              <h2>Pagamento & Confirmação</h2>
+              <p>Escolha o pacote ideal e finalize o pagamento para confirmar seu agendamento.</p>
+            </div>
+            <button class="btn-text" onclick="voltarParaHorarios()">&larr; Voltar para o Calendário</button>
+          </div>
+
+          <!-- Card de Resumo da Sessão Escolhida -->
+          <div class="checkout-session-summary">
+            <div class="session-brief">
+              <span class="icon">🗓️</span>
+              <div>
+                <strong>Sessão de Psicanálise Clínica</strong>
+                <div id="checkout-selected-slot-text" class="subtext">--/-- às --:--</div>
+              </div>
+            </div>
+            <div class="patient-brief">
+              <span class="subtext" id="checkout-patient-name-text">Paciente: --</span>
+            </div>
+          </div>
+
+          <!-- Alerta de Créditos Disponíveis (Caso a paciente já possua créditos de pacotes) -->
+          <div id="checkout-credits-alert" class="credits-alert-box mb-4" style="display:none;">
+            <div class="flex-between align-center">
+              <div>
+                <span class="badge-credit">✦ Créditos Disponíveis</span>
+                <h4 class="mt-1" style="color: var(--gold-champagne);">Você possui <span id="checkout-credits-count">0</span> crédito(s) de sessão!</h4>
+                <p class="subtext">Você pode utilizar 1 crédito do seu pacote para confirmar este agendamento imediatamente, sem qualquer cobrança.</p>
+              </div>
+              <button class="btn btn-primary btn-glow" onclick="handleAgendarComCredito()">
+                <span>✓ Confirmar Agendamento com 1 Crédito</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- SELEÇÃO DE PACOTES E PLANOS -->
+          <div class="section-packages-checkout mt-4">
+            <div class="flex-between align-center mb-2">
+              <h3 class="gold-gradient-title">1. Selecione o Pacote de Sessões:</h3>
+              <span class="subtext" id="checkout-base-rate-hint">Valor Base: R$ 180,00</span>
+            </div>
+
+            <div class="packages-grid" id="checkout-packages-container">
+              <!-- Pacote 1: Sessão Avulsa -->
+              <div class="package-card active" onclick="selectCheckoutPackage('avulso', this)" id="pkg-card-avulso">
+                <div class="pkg-header">
+                  <span class="pkg-badge">Individual</span>
+                  <h4>Sessão Avulsa</h4>
+                </div>
+                <div class="pkg-sessoes">1 Sessão (50 min)</div>
+                <div class="pkg-price-wrap">
+                  <span class="pkg-currency">R$</span>
+                  <span class="pkg-price" id="pkg-price-avulso">180,00</span>
+                </div>
+                <div class="pkg-installments" id="pkg-inst-avulso">À vista (PIX ou 1x Cartão)</div>
+                <div class="pkg-desc">Atendimento individual pontual.</div>
+                <div class="pkg-radio-indicator">● Selecionado</div>
+              </div>
+
+              <!-- Pacote 2: Mensal -->
+              <div class="package-card" onclick="selectCheckoutPackage('mensal', this)" id="pkg-card-mensal">
+                <div class="pkg-header">
+                  <span class="pkg-badge">Mensal</span>
+                  <h4>Pacote Mensal</h4>
+                </div>
+                <div class="pkg-sessoes">4 Sessões</div>
+                <div class="pkg-price-wrap">
+                  <span class="pkg-currency">R$</span>
+                  <span class="pkg-price" id="pkg-price-mensal">720,00</span>
+                </div>
+                <div class="pkg-installments" id="pkg-inst-mensal">Até 3x no Cartão</div>
+                <div class="pkg-desc">1 sessão semanal para acompanhamento contínuo.</div>
+                <div class="pkg-radio-indicator">○ Selecionar</div>
+              </div>
+
+              <!-- Pacote 3: Trimestral (5% OFF) -->
+              <div class="package-card highlight-card" onclick="selectCheckoutPackage('trimestral', this)" id="pkg-card-trimestral">
+                <div class="pkg-header">
+                  <span class="pkg-badge discount">✦ 5% OFF</span>
+                  <h4>Pacote Trimestral</h4>
+                </div>
+                <div class="pkg-sessoes">12 Sessões</div>
+                <div class="pkg-price-wrap">
+                  <span class="pkg-old-price" id="pkg-old-trimestral">R$ 2.160,00</span>
+                  <span class="pkg-currency">R$</span>
+                  <span class="pkg-price" id="pkg-price-trimestral">2.052,00</span>
+                </div>
+                <div class="pkg-installments" id="pkg-inst-trimestral">Até 3x sem juros de R$ 684,00</div>
+                <div class="pkg-economy" id="pkg-econ-trimestral">Economize R$ 108,00</div>
+                <div class="pkg-radio-indicator">○ Selecionar</div>
+              </div>
+
+              <!-- Pacote 4: Semestral (8% OFF) -->
+              <div class="package-card highlight-card gold-border" onclick="selectCheckoutPackage('semestral', this)" id="pkg-card-semestral">
+                <div class="pkg-header">
+                  <span class="pkg-badge discount gold">✦ 8% OFF</span>
+                  <h4>Pacote Semestral</h4>
+                </div>
+                <div class="pkg-sessoes">24 Sessões (6 meses)</div>
+                <div class="pkg-price-wrap">
+                  <span class="pkg-old-price" id="pkg-old-semestral">R$ 4.320,00</span>
+                  <span class="pkg-currency">R$</span>
+                  <span class="pkg-price" id="pkg-price-semestral">3.974,40</span>
+                </div>
+                <div class="pkg-installments" id="pkg-inst-semestral">Até 6x sem juros de R$ 662,40</div>
+                <div class="pkg-economy" id="pkg-econ-semestral">Economize R$ 345,60</div>
+                <div class="pkg-radio-indicator">○ Selecionar</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. FORMAS DE PAGAMENTO (TABS PIX / CARTÃO) -->
+          <div class="section-payment-method mt-4">
+            <h3 class="gold-gradient-title mb-3">2. Escolha a Forma de Pagamento:</h3>
+            
+            <div class="payment-tabs-nav">
+              <button type="button" class="pay-tab-btn active" id="tab-btn-pix" onclick="switchPaymentTab('pix')">
+                <span class="pay-icon">❖</span>
+                <span>PIX Instantâneo</span>
+                <span class="pay-sub">Aprovação Imediata</span>
+              </button>
+              <button type="button" class="pay-tab-btn" id="tab-btn-card" onclick="switchPaymentTab('cartao_credito')">
+                <span class="pay-icon">💳</span>
+                <span>Cartão de Crédito</span>
+                <span class="pay-sub">Parcelamento sem Juros</span>
+              </button>
+            </div>
+
+            <!-- PAINEL PIX -->
+            <div id="pay-panel-pix" class="pay-tab-content active mt-3">
+              <div class="pix-checkout-box">
+                <div id="pix-init-section">
+                  <div class="text-center py-3">
+                    <p class="mb-2">Total a pagar no PIX: <strong class="pix-total-highlight" id="pix-total-display">R$ 180,00</strong></p>
+                    <button class="btn btn-primary btn-lg btn-glow" type="button" onclick="handleGerarPixCheckout()">
+                      <span>⚡ Gerar QR Code PIX Dinâmico</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div id="pix-generated-section" style="display:none;">
+                  <div class="pix-grid-checkout">
+                    <!-- QR Code -->
+                    <div class="qrcode-wrapper">
+                      <div class="qrcode-frame">
+                        <img id="checkout-qrcode-img" src="" alt="QR Code PIX">
+                      </div>
+                      <div class="pix-timer-badge mt-2">
+                        ⏳ Expira em: <strong id="pix-timer-text">14:59</strong>
+                      </div>
+                    </div>
+
+                    <!-- Dados Copia e Cola -->
+                    <div class="pix-copy-section">
+                      <span class="badge-pix-live">● Aguardando Pagamento</span>
+                      <h4 class="mt-2">Pague com o aplicativo do seu banco:</h4>
+                      <p class="subtext">1. Abra o app do seu banco e escolha <strong>PIX</strong> &gt; <strong>Ler QR Code</strong> ou <strong>PIX Copia e Cola</strong>.</p>
+                      
+                      <div class="copy-box mt-2">
+                        <input type="text" id="pix-copia-cola-input" readonly value="">
+                        <button class="btn btn-secondary btn-sm" type="button" onclick="copyPixCopiaCola()">📋 Copiar Código</button>
+                      </div>
+
+                      <div class="pix-extra-details mt-3">
+                        <div><strong>Favorecida:</strong> Psicanalista Cristina Martins</div>
+                        <div><strong>Chave PIX:</strong> 24942168856</div>
+                        <div><strong>Valor:</strong> <span id="pix-copy-val-display">R$ 180,00</span></div>
+                      </div>
+
+                      <div class="mt-4 flex-gap-2">
+                        <button class="btn btn-primary btn-block" type="button" onclick="handleVerificarPixConfirmado()">
+                          <span>🔄 Verificar / Confirmar Pagamento PIX</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- PAINEL CARTÃO DE CRÉDITO -->
+            <div id="pay-panel-card" class="pay-tab-content mt-3" style="display:none;">
+              <div class="card-checkout-box">
+                <form id="form-checkout-card" onsubmit="handleProcessarCartaoCheckout(event)">
+                  <div class="form-grid">
+                    <div class="form-group full-width">
+                      <label>Número do Cartão *</label>
+                      <div class="card-input-wrapper">
+                        <input type="text" id="card-numero" class="form-input" placeholder="0000 0000 0000 0000" maxlength="19" oninput="formatCardNumber(this)" required>
+                        <span class="card-brand-icon" id="card-brand-badge">💳</span>
+                      </div>
+                    </div>
+
+                    <div class="form-group full-width">
+                      <label>Nome Impresso no Cartão *</label>
+                      <input type="text" id="card-titular" class="form-input" placeholder="NOME COMO NO CARTÃO" required style="text-transform:uppercase;">
+                    </div>
+
+                    <div class="form-group">
+                      <label>Validade (MM/AA) *</label>
+                      <input type="text" id="card-validade" class="form-input" placeholder="MM/AA" maxlength="5" oninput="formatExpiry(this)" required>
+                    </div>
+
+                    <div class="form-group">
+                      <label>CVV / Cód. Segurança *</label>
+                      <input type="text" id="card-cvv" class="form-input" placeholder="123" maxlength="4" required>
+                    </div>
+
+                    <div class="form-group full-width">
+                      <label>Opções de Parcelamento *</label>
+                      <select id="card-parcelas" class="form-select" required>
+                        <!-- Preenchido dinamicamente com base no pacote selecionado -->
+                        <option value="1">1x de R$ 180,00 (À vista)</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="security-card-footer mt-3 flex-between align-center">
+                    <div class="subtext">🔒 Transação Criptografada SSL 256-bits</div>
+                    <button type="submit" class="btn btn-primary btn-lg btn-glow">
+                      <span>🔒 Pagar <span id="card-btn-total-display">R$ 180,00</span> e Confirmar Agendamento</span>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- PASSO 4: CONFIRMAÇÃO & INSTRUÇÕES FINAIS DE BOAS-VINDAS -->
+        <div id="step-boas-vindas" class="card-box booking-step" style="display: none;">
+          <div class="welcome-card">
+            <div class="welcome-icon animate-pop">🌸</div>
+            <span class="step-tag">Passo 4 de 4</span>
+            <h2 class="welcome-title">Agendamento & Pagamento Confirmados!</h2>
+            
+            <div class="welcome-letter">
+              <p>Olá, <strong id="welcome-patient-name">Paciente</strong>!</p>
+              <p>Seu pagamento foi confirmado com sucesso e seu horário está <strong>oficialmente reservado</strong> na agenda da <strong>Psicanalista Cristina Martins</strong>.</p>
+              <div id="welcome-package-bonus-notice" class="mt-2 mb-2" style="display:none;"></div>
+              <p>A psicanálise é um percurso singular, um tempo e espaço dedicados exclusivamente à sua subjetividade e ao seu cuidado emocional.</p>
+            </div>
+
+            <!-- Resumo da Consulta Reservada -->
+            <div class="session-confirmed-box" id="confirmed-session-summary">
+              <!-- Preenchido via JS -->
+            </div>
+
+            <!-- Instruções Finais para a Sessão -->
+            <div class="instructions-card">
+              <h4 style="color: var(--gold-300); margin-bottom: 0.6rem;">💡 Instruções Finais para o seu Atendimento:</h4>
+              <ul class="instructions-list">
+                <li><strong>Ambiente Privativo:</strong> Escolha um local tranquilo, silencioso e sem interrupções para garantir sua privacidade durante a sessão.</li>
+                <li><strong>Fones de Ouvido:</strong> O uso de fones com microfone proporciona maior clareza e imersão na escuta psicanalítica.</li>
+                <li><strong>Pontualidade:</strong> A sessão tem duração de 50 minutos e se inicia pontualmente no horário agendado.</li>
+              </ul>
+            </div>
+
+            <!-- Integração com Calendário e Ações -->
+            <div class="calendar-sync-actions mt-3">
+              <button class="btn btn-secondary btn-sm" onclick="handleAddToGoogleCalendar()">
+                📅 Adicionar ao Google Agenda
+              </button>
+              <button class="btn btn-secondary btn-sm" onclick="handleDownloadICS()">
+                📥 Baixar Lembrete (.ICS)
+              </button>
+            </div>
+
+            <div class="welcome-actions mt-3">
+              <button class="btn btn-primary btn-block btn-lg" onclick="navigateTo('page-minhas-consultas')">
+                <span>Ver Minhas Consultas & Saldo de Sessões</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+      </div>
+    </section>
+
+    <!-- ==================== MINHAS CONSULTAS (PACIENTE) ==================== -->
+    <section id="page-minhas-consultas" class="page-view">
+      <div class="container">
+        <div class="section-title-wrap">
+          <h2>Minhas Consultas</h2>
+          <p>Consulte seu histórico de sessões e status de agendamento.</p>
+        </div>
+
+        <!-- Login de Paciente por E-mail -->
+        <div id="patient-login-box" class="card-box login-box-centered">
+          <h3>Acessar minhas sessões</h3>
+          <p>Informe seu e-mail cadastrado para visualizar seus horários.</p>
+          <form onsubmit="handleLoginPacienteEmail(event)">
+            <div class="form-group mt-3">
+              <label for="login-paciente-email">Seu E-mail</label>
+              <input type="email" id="login-paciente-email" class="form-input" placeholder="seuemail@exemplo.com" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block mt-3">
+              <span>Consultar Meus Horários</span>
+            </button>
+          </form>
+          <div class="text-center mt-3">
+            <span class="subtext">Primeira vez no consultório? <a href="javascript:void(0)" onclick="navigateTo('page-agendamento')">Agende sua primeira consulta</a></span>
+          </div>
+        </div>
+
+        <!-- Dashboard da Paciente -->
+        <div id="patient-dashboard" style="display:none;">
+          <div class="patient-profile-bar card-box">
+            <div class="profile-info">
+              <div class="avatar-circle" id="patient-avatar">P</div>
+              <div>
+                <h3 id="patient-display-name">Nome da Paciente</h3>
+                <span class="subtext" id="patient-display-email">email@exemplo.com</span>
+                <div class="patient-credits-tag mt-1">
+                  <span class="badge-credit">✦ Saldo: <strong id="patient-display-credits">0</strong> créditos de sessão</span>
+                </div>
+              </div>
+            </div>
+            <div class="profile-actions">
+              <button class="btn btn-secondary btn-sm" onclick="openComprarPacoteModal()">🛒 Adquirir Pacote de Sessões</button>
+              <button class="btn btn-primary btn-sm" onclick="navigateTo('page-agendamento')">+ Agendar Sessão</button>
+              <button class="btn btn-outline btn-sm" onclick="handleLogoutPaciente()">Sair</button>
+            </div>
+          </div>
+
+          <div class="consultas-container mt-4">
+            <h3>Suas Sessões Agendadas</h3>
+            <div id="patient-consultas-list" class="consultas-grid mt-3">
+              <!-- Preenchido via JS -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== LOGIN ADMIN (PSICANALISTA) ==================== -->
+    <section id="page-admin-login" class="page-view">
+      <div class="container-narrow">
+        <div class="card-box login-box-centered">
+          <div class="lock-shield">🔒</div>
+          <h2>Acesso da Psicanalista</h2>
+          <p>Área restrita e segura com criptografia ponta a ponta.</p>
+          <form onsubmit="handleAdminSecureLogin(event)">
+            <div class="form-group mt-3 text-left">
+              <label for="admin-email-input">E-mail Profissional</label>
+              <input type="email" id="admin-email-input" class="form-input" value="cris_asmartins@hotmail.com" required>
+            </div>
+            <div class="form-group mt-3 text-left">
+              <label for="admin-pass-input">Senha de Acesso</label>
+              <input type="password" id="admin-pass-input" class="form-input" placeholder="Digite sua senha segura" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block btn-lg mt-4">
+              <span>Entrar no Painel Seguro</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ÁREA RESTRITA / PAINEL DA CRISTINA ==================== -->
+    <section id="page-admin-portal" class="page-view">
+      <div class="admin-wrapper">
+        
+        <!-- Barra Lateral da Psicanalista -->
+        <aside class="admin-nav-sidebar">
+          <div class="admin-profile-summary">
+            <div class="avatar-circle admin-avatar" title="Psicanálise">
+              <img src="simbolo-psicanalise.png" alt="Símbolo da Psicanálise" class="caduceu-img">
+            </div>
+            <div class="admin-info-text">
+              <h4>Psicanalista Cristina Martins</h4>
+              <span>cris_asmartins@hotmail.com</span>
+            </div>
+          </div>
+
+          <!-- Central de Notificações / Alertas -->
+          <div class="admin-notif-bar" id="admin-notif-bar" onclick="switchAdminTab('tab-financeiro-gestao')">
+            <span class="icon">🔔</span>
+            <span>Notificações</span>
+            <span class="notif-badge" id="admin-notif-badge" style="display:none;">0</span>
+          </div>
+
+          <nav class="admin-menu">
+            <button class="admin-menu-item active" onclick="switchAdminTab('tab-visao-geral')" id="btn-tab-visao-geral">
+              <span class="icon">📊</span> Visão Geral & Métricas
+            </button>
+            <button class="admin-menu-item" onclick="switchAdminTab('tab-financeiro-gestao')" id="btn-tab-financeiro-gestao">
+              <span class="icon">💳</span> Gestão Financeira & Vendas
+            </button>
+            <button class="admin-menu-item" onclick="switchAdminTab('tab-consultas-gestao')" id="btn-tab-consultas-gestao">
+              <span class="icon">🗓️</span> Gestão da Agenda
+            </button>
+            <button class="admin-menu-item" onclick="switchAdminTab('tab-horarios-gestao')" id="btn-tab-horarios-gestao">
+              <span class="icon">⚙️</span> Gerenciar Horários & Folgas
+            </button>
+            <button class="admin-menu-item" onclick="switchAdminTab('tab-pacientes-gestao')" id="btn-tab-pacientes-gestao">
+              <span class="icon">📁</span> Prontuários de Psicanálise
+            </button>
+          </nav>
+
+          <div class="admin-sidebar-footer">
+            <button class="btn btn-outline btn-block btn-sm" onclick="handleAdminLogout()">
+              <span>🚪 Encerrar Sessão</span>
+            </button>
+          </div>
+        </aside>
+
+        <!-- Painel Principal -->
+        <div class="admin-content-panel">
+          
+          <!-- TAB 1: VISÃO GERAL -->
+          <div id="tab-visao-geral" class="admin-tab-pane active">
+            <div class="panel-header">
+              <h2>Painel de Gestão Clínica</h2>
+              <p>Métricas consolidadas do consultório da Psicanalista Cristina Martins.</p>
+            </div>
+
+            <div class="metrics-grid">
+              <div class="metric-card">
+                <span class="metric-title">Total de Pacientes</span>
+                <h3 class="metric-value" id="metric-pacientes">0</h3>
+                <span class="metric-note">Cadastradas no consultório</span>
+              </div>
+              <div class="metric-card">
+                <span class="metric-title">Consultas Totais</span>
+                <h3 class="metric-value" id="metric-consultas">0</h3>
+                <span class="metric-note">Histórico completo</span>
+              </div>
+              <div class="metric-card highlight">
+                <span class="metric-title">Sessões Hoje</span>
+                <h3 class="metric-value" id="metric-hoje">0</h3>
+                <span class="metric-note">Agendadas para hoje</span>
+              </div>
+              <div class="metric-card success">
+                <span class="metric-title">Receita Confirmada</span>
+                <h3 class="metric-value" id="metric-receita">R$ 0,00</h3>
+                <span class="metric-note">Sessões Pagas e Realizadas</span>
+              </div>
+            </div>
+
+            <div class="card-box mt-4">
+              <div class="flex-between mb-3">
+                <h3>Sessões Recentes</h3>
+                <button class="btn btn-secondary btn-sm" onclick="loadAdminConsultas()">Atualizar Lista</button>
+              </div>
+              <div id="dashboard-recent-consultas" class="table-responsive">
+                <!-- Preenchido via JS -->
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB NOVA: GESTÃO FINANCEIRA & PAGAMENTOS -->
+          <div id="tab-financeiro-gestao" class="admin-tab-pane">
+            <div class="panel-header flex-between">
+              <div>
+                <h2>Gestão Financeira & Vendas de Pacotes</h2>
+                <p>Controle detalhado de recebimentos via PIX, Cartão de Crédito, pacotes vendidos e notificações.</p>
+              </div>
+              <button class="btn btn-secondary btn-sm" onclick="loadAdminFinanceiro()">
+                <span>🔄 Atualizar Dados Financeiros</span>
+              </button>
+            </div>
+
+            <!-- Métricas Financeiras -->
+            <div class="metrics-grid">
+              <div class="metric-card success">
+                <span class="metric-title">Faturamento Total</span>
+                <h3 class="metric-value" id="fin-receita-total">R$ 0,00</h3>
+                <span class="metric-note">Transações confirmadas</span>
+              </div>
+              <div class="metric-card highlight">
+                <span class="metric-title">Faturamento no Mês</span>
+                <h3 class="metric-value" id="fin-receita-mes">R$ 0,00</h3>
+                <span class="metric-note">Mês corrente</span>
+              </div>
+              <div class="metric-card">
+                <span class="metric-title">Transações Pagas</span>
+                <h3 class="metric-value" id="fin-total-transacoes">0</h3>
+                <span class="metric-note" id="fin-ticket-medio">Ticket Médio: R$ 0,00</span>
+              </div>
+              <div class="metric-card">
+                <span class="metric-title">Créditos de Sessões Ativos</span>
+                <h3 class="metric-value" id="fin-creditos-ativos">0</h3>
+                <span class="metric-note">Em posse das pacientes</span>
+              </div>
+            </div>
+
+            <!-- Central de Notificações de Pagamentos Recentes -->
+            <div class="card-box mt-4">
+              <div class="flex-between align-center mb-3">
+                <div class="flex-align-center gap-2">
+                  <span style="font-size: 1.3rem;">🔔</span>
+                  <h3>Notificações & Confirmações de Pagamento</h3>
+                </div>
+                <button class="btn btn-outline btn-sm" onclick="handleMarcarNotificacoesLidas()">Marcar todas como lidas</button>
+              </div>
+              <div id="admin-notifications-list" class="notifications-container">
+                <!-- Preenchido via JS -->
+              </div>
+            </div>
+
+            <!-- Tabela de Transações Financeiras -->
+            <div class="card-box mt-4">
+              <div class="flex-between align-center mb-3">
+                <h3>Extrato Geral de Transações & Checkout</h3>
+                <div class="filter-group">
+                  <select id="filtro-status-transacao" class="form-select" onchange="loadAdminFinanceiro()">
+                    <option value="todos">Todos os Status</option>
+                    <option value="pago">Aprovado (Pago)</option>
+                    <option value="pendente">Pendente (Aguardando PIX)</option>
+                    <option value="cancelado">Cancelado</option>
+                  </select>
+                </div>
+              </div>
+
+              <div id="admin-transacoes-table-wrapper" class="table-responsive">
+                <!-- Preenchido via JS -->
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 2: GESTÃO DA AGENDA -->
+          <div id="tab-consultas-gestao" class="admin-tab-pane">
+            <div class="panel-header flex-between">
+              <div>
+                <h2>Agenda de Consultas</h2>
+                <p>Controle de sessões, confirmação de pagamentos e registros clínicos.</p>
+              </div>
+              <div class="filter-group">
+                <select id="filtro-status-consulta" class="form-select" onchange="filterAdminConsultas()">
+                  <option value="todos">Todos os Status</option>
+                  <option value="agendado">Reservado (Agendado)</option>
+                  <option value="pago">Pago</option>
+                  <option value="realizado">Realizado</option>
+                  <option value="cancelado">Cancelado</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="card-box">
+              <div id="admin-consultas-table-wrapper" class="table-responsive">
+                <!-- Preenchido via JS -->
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 3: GERENCIAR HORÁRIOS & FOLGAS -->
+          <div id="tab-horarios-gestao" class="admin-tab-pane">
+            <div class="panel-header">
+              <h2>Gerenciamento de Horários de Atendimento</h2>
+              <p>Defina os dias da semana em que atende, inclua horários disponíveis (individualmente ou em lote) e bloqueie feriados ou folgas.</p>
+            </div>
+
+            <!-- Gerador em Lote -->
+            <div class="card-box mb-4">
+              <h3 style="color: var(--rose-400);">⚡ Liberação Rápida de Horários em Lote</h3>
+              <p class="subtext">Selecione os dias da semana e os horários que deseja liberar para atendimento com 1 clique:</p>
+              
+              <form id="form-lote-horarios" onsubmit="handleGerarHorariosLote(event)" class="mt-3">
+                <div class="form-group mb-3">
+                  <label>1. Selecione os Dias da Semana:</label>
+                  <div class="weekdays-checkbox-group">
+                    <label class="checkbox-pill"><input type="checkbox" name="lote-dias" value="1" checked> Segunda</label>
+                    <label class="checkbox-pill"><input type="checkbox" name="lote-dias" value="2" checked> Terça</label>
+                    <label class="checkbox-pill"><input type="checkbox" name="lote-dias" value="3" checked> Quarta</label>
+                    <label class="checkbox-pill"><input type="checkbox" name="lote-dias" value="4" checked> Quinta</label>
+                    <label class="checkbox-pill"><input type="checkbox" name="lote-dias" value="5" checked> Sexta</label>
+                    <label class="checkbox-pill"><input type="checkbox" name="lote-dias" value="6"> Sábado</label>
+                    <label class="checkbox-pill"><input type="checkbox" name="lote-dias" value="0"> Domingo</label>
+                  </div>
+                </div>
+
+                <div class="form-group mb-3">
+                  <label>2. Selecione os Horários de Atendimento:</label>
+                  <div class="slots-checkbox-group">
+                    <label class="checkbox-slot"><input type="checkbox" name="lote-slots" value="08:00" checked> 08:00</label>
+                    <label class="checkbox-slot"><input type="checkbox" name="lote-slots" value="09:00" checked> 09:00</label>
+                    <label class="checkbox-slot"><input type="checkbox" name="lote-slots" value="10:00" checked> 10:00</label>
+                    <label class="checkbox-slot"><input type="checkbox" name="lote-slots" value="11:00" checked> 11:00</label>
+                    <label class="checkbox-slot"><input type="checkbox" name="lote-slots" value="12:00"> 12:00</label>
+                    <label class="checkbox-slot"><input type="checkbox" name="lote-slots" value="13:00"> 13:00</label>
+                    <label class="checkbox-slot"><input type="checkbox" name="lote-slots" value="14:00" checked> 14:00</label>
+                    <label class="checkbox-slot"><input type="checkbox" name="lote-slots" value="15:00" checked> 15:00</label>
+                    <label class="checkbox-slot"><input type="checkbox" name="lote-slots" value="16:00" checked> 16:00</label>
+                    <label class="checkbox-slot"><input type="checkbox" name="lote-slots" value="17:00" checked> 17:00</label>
+                    <label class="checkbox-slot"><input type="checkbox" name="lote-slots" value="18:00" checked> 18:00</label>
+                    <label class="checkbox-slot"><input type="checkbox" name="lote-slots" value="19:00" checked> 19:00</label>
+                    <label class="checkbox-slot"><input type="checkbox" name="lote-slots" value="20:00" checked> 20:00</label>
+                    <label class="checkbox-slot"><input type="checkbox" name="lote-slots" value="21:00" checked> 21:00</label>
+                  </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                  <span>🚀 Aplicar e Liberar Horários Selecionados</span>
+                </button>
+              </form>
+            </div>
+
+            <div class="grid-2-cols">
+              <!-- Inclusão Individual -->
+              <div class="card-box">
+                <h3>Adicionar Horário Individual</h3>
+                <p class="subtext">Adicione um horário específico para um dia da semana.</p>
+                <form id="form-add-slot" onsubmit="handleAddHorarioSlot(event)" class="mt-3">
+                  <div class="form-group">
+                    <label>Dia da Semana</label>
+                    <select id="slot-dia-semana" class="form-select" required>
+                      <option value="1">Segunda-feira</option>
+                      <option value="2">Terça-feira</option>
+                      <option value="3">Quarta-feira</option>
+                      <option value="4">Quinta-feira</option>
+                      <option value="5">Sexta-feira</option>
+                      <option value="6">Sábado</option>
+                      <option value="0">Domingo</option>
+                    </select>
+                  </div>
+                  <div class="form-grid">
+                    <div class="form-group">
+                      <label>Hora Início</label>
+                      <input type="time" id="slot-hora-inicio" class="form-input" value="09:00" required>
+                    </div>
+                    <div class="form-group">
+                      <label>Hora Fim</label>
+                      <input type="time" id="slot-hora-fim" class="form-input" value="10:00" required>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-secondary btn-block mt-3">+ Incluir Horário</button>
+                </form>
+              </div>
+
+              <!-- Bloquear Data (Feriados ou Folgas) -->
+              <div class="card-box">
+                <h3>Bloquear Dia Específico (Folgas / Feriados)</h3>
+                <p class="subtext">Nenhum horário será exibido na busca de pacientes para datas bloqueadas.</p>
+                <form id="form-add-block" onsubmit="handleAddBloqueioData(event)" class="mt-3">
+                  <div class="form-group">
+                    <label>Data a Bloquear</label>
+                    <input type="date" id="block-data" class="form-input" required>
+                  </div>
+                  <button type="submit" class="btn btn-danger btn-block mt-3">🔒 Bloquear Data na Agenda</button>
+                </form>
+              </div>
+            </div>
+
+            <!-- Grade Atual Organizada por Dia da Semana -->
+            <div class="card-box mt-4">
+              <h3>Grade Semanal Atual & Folgas Programadas</h3>
+              <div id="admin-grade-horarios-list" class="mt-3">
+                <!-- Preenchido via JS -->
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 4: MÓDULO DE PRONTUÁRIOS DE PSICANÁLISE (ÁREA SIGILOSA) -->
+          <div id="tab-pacientes-gestao" class="admin-tab-pane">
+            <div class="panel-header flex-between">
+              <div>
+                <h2>Gestão de Pacientes & Prontuários Confidenciais</h2>
+                <p>Controle de acesso estrito (RBAC) com criptografia AES-256 em repouso no banco de dados.</p>
+              </div>
+              <div class="rls-badge-header">
+                🔒 Sigilo Clínico Ativo (AES-256)
+              </div>
+            </div>
+
+            <!-- Barra de Busca de Pacientes -->
+            <div class="card-box mb-4">
+              <div class="search-bar-wrapper">
+                <input type="text" id="admin-search-pacientes" class="form-input" placeholder="🔍 Buscar paciente por nome, e-mail ou telefone..." oninput="handleSearchPacientes(this.value)">
+              </div>
+            </div>
+
+            <!-- Tabela de Pacientes -->
+            <div class="card-box">
+              <div id="admin-pacientes-table-wrapper" class="table-responsive">
+                <!-- Preenchido dinamicamente via JS -->
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== MODAL DE PRONTUÁRIO ANALÍTICO COMPLETO ==================== -->
+  <div id="modal-prontuario-completo" class="modal-backdrop">
+    <div class="modal-dialog modal-full-custom">
+      <div class="modal-header">
+        <div>
+          <div class="flex-align-center gap-2">
+            <h3 id="prontuario-modal-title">Prontuário de Psicanálise</h3>
+            <span class="rls-badge-sm">🔒 Criptografado (AES-256)</span>
+          </div>
+          <span class="subtext" id="prontuario-modal-subtitle">Ficha clínica confidencial da paciente</span>
+        </div>
+        <button class="modal-close" onclick="closeProntuarioCompletoModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        
+        <!-- Ficha / Header da Paciente -->
+        <div id="prontuario-paciente-card" class="patient-profile-header-card">
+          <!-- Preenchido via JS -->
+        </div>
+
+        <!-- Abas Internas do Prontuário -->
+        <div class="prontuario-tabs-bar mt-3">
+          <button class="prontuario-tab-btn active" onclick="switchProntuarioSubTab('subtab-notas')" id="subbtn-notas">
+            📝 Anotações & Evolução Clínica
+          </button>
+          <button class="prontuario-tab-btn" onclick="switchProntuarioSubTab('subtab-consultas')" id="subbtn-consultas">
+            🗓️ Histórico de Sessões
+          </button>
+          <button class="prontuario-tab-btn" onclick="switchProntuarioSubTab('subtab-anexos')" id="subbtn-anexos">
+            📎 Documentos & Anexos (PDFs)
+          </button>
+          <button class="prontuario-tab-btn" onclick="switchProntuarioSubTab('subtab-financeiro')" id="subbtn-financeiro">
+            💳 Gestão Financeira da Paciente
+          </button>
+        </div>
+
+        <!-- SUBTAB 1: ANOTAÇÕES CLÍNICAS & EVOLUÇÃO -->
+        <div id="subtab-notas" class="prontuario-subtab-pane active mt-3">
+          
+          <!-- Formulário de Nova Anotação -->
+          <div class="create-note-box">
+            <h4 style="color: var(--rose-400); margin-bottom: 0.6rem;">+ Registrar Nova Anotação no Prontuário</h4>
+            <form id="form-create-note" onsubmit="handleSalvarNotaProntuario(event)">
+              <div class="form-grid mb-2">
+                <div class="form-group">
+                  <label>Título da Nota</label>
+                  <input type="text" id="note-titulo" class="form-input" placeholder="Ex: Sessão #3 - Análise de sonhos e significantes" required>
+                </div>
+                <div class="form-group">
+                  <label>Tipo de Anotação</label>
+                  <select id="note-tipo" class="form-select">
+                    <option value="evolucao">Evolução da Paciente</option>
+                    <option value="sessao">Registro de Sessão Analítica</option>
+                    <option value="observacao">Observações Gerais</option>
+                    <option value="hipotese_analitica">Hipótese Diagnóstica / Analítica</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group mb-3">
+                <label>Conteúdo Clínico Confidencial (Criptografia AES-256 automática):</label>
+                <textarea id="note-conteudo" class="form-textarea" rows="5" placeholder="Digite as associações, significantes, elaborações inconscientes e impressões psicanalíticas da sessão..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-sm">
+                <span>🔒 Salvar Nota Criptografada</span>
+              </button>
+            </form>
+          </div>
+
+          <!-- Linha do Tempo de Notas Salvas -->
+          <div class="notes-timeline-container mt-4">
+            <div class="flex-between mb-2">
+              <h4 style="color: var(--text-main);">Histórico de Notas Salvas</h4>
+              <span class="subtext" id="prontuario-last-update-text">Última atualização: --</span>
+            </div>
+            <div id="prontuario-notes-timeline" class="notes-timeline-list">
+              <!-- Preenchido dinamicamente via JS -->
+            </div>
+          </div>
+
+        </div>
+
+        <!-- SUBTAB 2: HISTÓRICO DE SESSÕES -->
+        <div id="subtab-consultas" class="prontuario-subtab-pane mt-3">
+          <div id="prontuario-consultas-list" class="table-responsive">
+            <!-- Preenchido via JS -->
+          </div>
+        </div>
+
+        <!-- SUBTAB 3: DOCUMENTOS & ANEXOS -->
+        <div id="subtab-anexos" class="prontuario-subtab-pane mt-3">
+          
+          <!-- Formulário de Upload -->
+          <div class="upload-anexo-box mb-4">
+            <h4 style="color: var(--gold-300); margin-bottom: 0.6rem;">📎 Anexar Documento ou PDF</h4>
+            <p class="subtext">Envie laudos, encaminhamentos, relatórios ou anotações digitalizadas.</p>
+            <div class="file-upload-dropzone mt-2">
+              <input type="file" id="anexo-file-input" accept=".pdf,.doc,.docx,.png,.jpg,.jpeg,.txt" onchange="handleFileSelected(this)">
+              <div class="dropzone-text" id="dropzone-label">
+                📄 Clique para selecionar um arquivo (PDF, Documento ou Imagem)
+              </div>
+            </div>
+            <button class="btn btn-secondary btn-sm mt-3" onclick="handleUploadAnexo()">
+              <span>Fazer Upload do Arquivo</span>
+            </button>
+          </div>
+
+          <!-- Lista de Anexos -->
+          <div>
+            <h4 class="mb-2">Documentos Anexados à Ficha</h4>
+            <div id="prontuario-anexos-list" class="anexos-grid">
+              <!-- Preenchido via JS -->
+            </div>
+          </div>
+
+        </div>
+
+        <!-- SUBTAB 4: GESTÃO FINANCEIRA & VALOR BASE DA PACIENTE (EXCLUSIVO ADMIN) -->
+        <div id="subtab-financeiro" class="prontuario-subtab-pane mt-3">
+          <div class="grid-2-cols">
+            <!-- 1. Personalização do Valor Base por Paciente -->
+            <div class="card-box">
+              <h4 style="color: var(--rose-400); margin-bottom: 0.5rem;">⚙️ Personalização do Valor da Sessão</h4>
+              <p class="subtext">Defina o valor base individual desta paciente. Este valor será utilizado como base para o cálculo de todos os pacotes e descontos (5% e 8%).</p>
+              
+              <form id="form-update-valor-base" onsubmit="handleSalvarValorBasePaciente(event)" class="mt-3">
+                <div class="form-group">
+                  <label>Valor Base por Sessão (R$) *</label>
+                  <div class="input-prefix-wrapper">
+                    <span class="input-prefix">R$</span>
+                    <input type="number" step="0.01" min="1" id="prontuario-input-valor-base" class="form-input" required placeholder="180.00">
+                  </div>
+                  <small class="field-hint">Apenas a Administradora (Cristina) pode visualizar e alterar este valor.</small>
+                </div>
+                <button type="submit" class="btn btn-primary btn-sm mt-2">
+                  <span>💾 Salvar Novo Valor da Paciente</span>
+                </button>
+              </form>
+            </div>
+
+            <!-- 2. Controle de Créditos de Sessões -->
+            <div class="card-box">
+              <h4 style="color: var(--gold-300); margin-bottom: 0.5rem;">✦ Saldo de Créditos de Sessões</h4>
+              <p class="subtext">Sessões disponíveis pré-pagas via pacotes adquiridos pela paciente.</p>
+              
+              <div class="credits-display-box my-3">
+                <span class="credits-number" id="prontuario-display-creditos">0</span>
+                <span class="credits-label">sessões disponíveis</span>
+              </div>
+
+              <form id="form-update-creditos" onsubmit="handleAjustarCreditosPaciente(event)">
+                <div class="form-group">
+                  <label>Ajustar Saldo de Créditos Manualmente:</label>
+                  <input type="number" min="0" id="prontuario-input-creditos" class="form-input" required placeholder="0">
+                </div>
+                <button type="submit" class="btn btn-secondary btn-sm mt-2">
+                  <span>Atualizar Créditos</span>
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Histórico de Transações e Compras desta Paciente -->
+          <div class="card-box mt-4">
+            <h4 class="mb-3">Histórico de Transações & Pacotes Pagos</h4>
+            <div id="prontuario-financeiro-transacoes-list" class="table-responsive">
+              <!-- Preenchido via JS -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-outline" onclick="closeProntuarioCompletoModal()">Fechar Prontuário</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL DE COMPRA DIRETA DE PACOTES (ÁREA DA PACIENTE) ==================== -->
+  <div id="modal-comprar-pacote" class="modal-backdrop">
+    <div class="modal-dialog modal-lg-custom">
+      <div class="modal-header">
+        <div>
+          <h3>Adquirir Pacote de Sessões com Desconto</h3>
+          <span class="subtext">Compre créditos de sessões para agendar seus atendimentos com flexibilidade</span>
+        </div>
+        <button class="modal-close" onclick="closeComprarPacoteModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="packages-grid" id="modal-packages-container">
+          <!-- Preenchido via JS -->
+        </div>
+
+        <div class="section-payment-method mt-4">
+          <h4 class="gold-gradient-title mb-3">Forma de Pagamento:</h4>
+          
+          <div class="payment-tabs-nav">
+            <button type="button" class="pay-tab-btn active" id="modal-tab-btn-pix" onclick="switchModalPaymentTab('pix')">
+              <span>❖ PIX Instantâneo</span>
+            </button>
+            <button type="button" class="pay-tab-btn" id="modal-tab-btn-card" onclick="switchModalPaymentTab('cartao_credito')">
+              <span>💳 Cartão de Crédito</span>
+            </button>
+          </div>
+
+          <!-- Modal PIX Panel -->
+          <div id="modal-pay-panel-pix" class="pay-tab-content active mt-3">
+            <div id="modal-pix-init" class="text-center py-3">
+              <p>Total a pagar: <strong id="modal-pix-total-display" class="pix-total-highlight">R$ 720,00</strong></p>
+              <button class="btn btn-primary btn-lg btn-glow mt-2" onclick="handleGerarPixModalCompra()">
+                <span>⚡ Gerar PIX Dinâmico</span>
+              </button>
+            </div>
+            <div id="modal-pix-result" style="display:none;" class="text-center">
+              <div class="qrcode-frame mx-auto" style="max-width:260px;">
+                <img id="modal-pix-qrcode-img" src="" alt="QR Code">
+              </div>
+              <div class="copy-box mt-3 max-w-md mx-auto">
+                <input type="text" id="modal-pix-copia-cola" readonly value="">
+                <button class="btn btn-secondary btn-sm" onclick="copyModalPixCode()">Copiar</button>
+              </div>
+              <button class="btn btn-primary btn-block mt-3" onclick="handleVerificarPixModal()">
+                <span>🔄 Já Realizei o PIX / Confirmar</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Modal Card Panel -->
+          <div id="modal-pay-panel-card" class="pay-tab-content mt-3" style="display:none;">
+            <form id="modal-form-card" onsubmit="handleProcessarCartaoModal(event)">
+              <div class="form-grid">
+                <div class="form-group full-width">
+                  <label>Número do Cartão *</label>
+                  <input type="text" id="modal-card-numero" class="form-input" placeholder="0000 0000 0000 0000" maxlength="19" oninput="formatCardNumber(this)" required>
+                </div>
+                <div class="form-group full-width">
+                  <label>Nome no Cartão *</label>
+                  <input type="text" id="modal-card-titular" class="form-input" placeholder="NOME DO TITULAR" required style="text-transform:uppercase;">
+                </div>
+                <div class="form-group">
+                  <label>Validade *</label>
+                  <input type="text" id="modal-card-validade" class="form-input" placeholder="MM/AA" maxlength="5" oninput="formatExpiry(this)" required>
+                </div>
+                <div class="form-group">
+                  <label>CVV *</label>
+                  <input type="text" id="modal-card-cvv" class="form-input" placeholder="123" maxlength="4" required>
+                </div>
+                <div class="form-group full-width">
+                  <label>Parcelamento *</label>
+                  <select id="modal-card-parcelas" class="form-select" required>
+                    <option value="1">1x</option>
+                  </select>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block btn-lg mt-3">
+                <span>🔒 Pagar Pacote e Adicionar Créditos</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-outline" onclick="closeComprarPacoteModal()">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast de Notificações -->
+  <div id="toast" class="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
