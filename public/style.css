@@ -131,16 +131,15 @@ body {
 .admin-avatar {
   width: 52px;
   height: 52px;
-  border-radius: var(--radius-full);
-  background: rgba(197, 160, 89, 0.12);
-  border: 1px solid var(--border-gold);
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 16px rgba(197, 160, 89, 0.28);
   transition: all 0.3s ease;
-  padding: 4px;
-  overflow: hidden;
+  padding: 0 !important;
+  overflow: visible;
   flex-shrink: 0;
 }
 
@@ -152,9 +151,8 @@ body {
   filter: drop-shadow(0 2px 6px rgba(212, 175, 55, 0.45));
 }
 
-.brand-logo:hover .logo-symbol {
-  border-color: var(--gold-hover);
-  box-shadow: 0 0 24px rgba(212, 175, 55, 0.65);
+.brand-logo:hover .caduceu-img {
+  filter: drop-shadow(0 0 12px rgba(212, 175, 55, 0.75));
   transform: scale(1.06);
 }
 
@@ -685,6 +683,50 @@ label {
   margin-top: 0.3rem;
 }
 
+/* ==================== SENHA COM BOTÃO DE VER SENHA ==================== */
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.password-wrapper .form-input {
+  padding-right: 3.2rem;
+}
+
+.toggle-password-btn {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  padding: 0.4rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  transition: color 0.2s ease, background 0.2s ease, transform 0.15s ease;
+  z-index: 2;
+}
+
+.toggle-password-btn:hover {
+  color: var(--gold-champagne);
+  background: rgba(197, 160, 89, 0.15);
+}
+
+.toggle-password-btn:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.toggle-password-btn:focus-visible {
+  outline: 2px solid var(--gold-primary);
+  outline-offset: 1px;
+}
+
 /* ==================== CALENDÁRIO MENSAL INTERATIVO ==================== */
 .calendar-monthly-wrapper {
   background: var(--bg-surface);
@@ -1160,7 +1202,9 @@ label {
 }
 
 .admin-avatar {
-  background: var(--gradient-rose-gold);
+  background: transparent;
+  border: none;
+  box-shadow: none;
 }
 
 .admin-info-text h4 {

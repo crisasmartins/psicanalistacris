@@ -2675,4 +2675,27 @@ async function handleProcessarCartaoModal(event) {
   }
 }
 
+function togglePasswordVisibility(inputId, btnId) {
+  const input = document.getElementById(inputId);
+  const btn = document.getElementById(btnId);
+  if (!input || !btn) return;
 
+  const openIcon = btn.querySelector('.eye-icon-open');
+  const closedIcon = btn.querySelector('.eye-icon-closed');
+
+  if (input.type === 'password') {
+    input.type = 'text';
+    btn.setAttribute('aria-label', 'Ocultar senha');
+    btn.title = 'Ocultar senha';
+    if (openIcon) openIcon.style.display = 'none';
+    if (closedIcon) closedIcon.style.display = 'inline-block';
+  } else {
+    input.type = 'password';
+    btn.setAttribute('aria-label', 'Mostrar senha');
+    btn.title = 'Mostrar senha';
+    if (openIcon) openIcon.style.display = 'inline-block';
+    if (closedIcon) closedIcon.style.display = 'none';
+  }
+}
+
+window.togglePasswordVisibility = togglePasswordVisibility;

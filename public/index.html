@@ -808,7 +808,9 @@
     <section id="page-admin-login" class="page-view">
       <div class="container-narrow">
         <div class="card-box login-box-centered">
-          <div class="lock-shield">🔒</div>
+          <div class="logo-symbol" style="margin: 0 auto 1.2rem auto;">
+            <img src="caduceu-gold.svg" alt="Símbolo da Psicanálise" class="caduceu-img">
+          </div>
           <h2>Acesso da Psicanalista</h2>
           <p>Área restrita e segura com criptografia ponta a ponta.</p>
           <form onsubmit="handleAdminSecureLogin(event)">
@@ -818,7 +820,13 @@
             </div>
             <div class="form-group mt-3 text-left">
               <label for="admin-pass-input">Senha de Acesso</label>
-              <input type="password" id="admin-pass-input" class="form-input" placeholder="Digite sua senha segura" required>
+              <div class="password-wrapper">
+                <input type="password" id="admin-pass-input" class="form-input" placeholder="Digite sua senha segura" required>
+                <button type="button" class="toggle-password-btn" id="toggle-admin-pass-btn" onclick="togglePasswordVisibility('admin-pass-input', 'toggle-admin-pass-btn')" aria-label="Mostrar ou ocultar senha" title="Mostrar senha">
+                  <svg class="eye-icon-open" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                  <svg class="eye-icon-closed" style="display: none;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+                </button>
+              </div>
             </div>
             <button type="submit" class="btn btn-primary btn-block btn-lg mt-4">
               <span>Entrar no Painel Seguro</span>
@@ -835,7 +843,7 @@
         <!-- Barra Lateral da Psicanalista -->
         <aside class="admin-nav-sidebar">
           <div class="admin-profile-summary">
-            <div class="avatar-circle admin-avatar" title="Psicanálise">
+            <div class="logo-symbol admin-avatar" title="Psicanálise">
               <img src="caduceu-gold.svg" alt="Símbolo da Psicanálise" class="caduceu-img">
             </div>
             <div class="admin-info-text">
